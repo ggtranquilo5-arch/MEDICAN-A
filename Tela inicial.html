@@ -187,3 +187,193 @@
 
 </body>
 </html>
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medprev - Agendamento</title>
+    <style>
+        :root {
+            --verde-escuro: #3e8e63;
+            --verde-claro: #c2dfcc;
+            --cinza-fundo: #f8f9fa;
+            --texto: #333;
+            --img-fundo: url('imagem.pjp/unnamed.webp'); 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: var(--texto);
+            /* Gradiente suave para o texto não sumir no fundo verde */
+            background-image: linear-gradient(rgba(248, 249, 250, 0.8), rgba(248, 249, 250, 0.8)), var(--img-fundo);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            transition: background 0.5s ease;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--texto);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--verde-escuro);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Animação nos botões */
+        .btn-primary, .btn-secondary, .btn-agendar, .btn-login {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover, .btn-secondary:hover, .btn-agendar:hover, .btn-login:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .btn-primary {
+            background-color: var(--verde-escuro);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            width: 300px;
+            font-size: 1rem;
+        }
+
+        .btn-secondary {
+            background-color: var(--verde-claro);
+            color: var(--verde-escuro);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            width: 300px;
+        }
+
+        .unidades-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card-unidade {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--verde-escuro);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .card-unidade:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-left-width: 15px;
+        }
+
+        .btn-agendar {
+            background-color: var(--verde-escuro);
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .main-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn-login {
+            text-decoration: none;
+            color: var(--verde-escuro);
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-links">
+            <img src="imagem.pjp/200x200ia-75.webp" style="width: 30px; height: auto;">
+            <a href="#">Sou Paciente</a>
+            <a href="#">Sou Profissional</a>
+            <a href="#">Unidades</a>
+            <a href="#">Sobre nós</a>
+        </div>
+
+        <div class="user-area">
+            <a href="login.html" class="btn-login">Login</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>AGENDE CONSULTAS E EXAMES</h1>
+            <p>Com valores acessíveis em <strong>Alta Floresta - MT</strong></p>
+            
+            <div class="main-buttons">
+                <button class="btn-primary">Orçamento ou agendamento</button>
+                <button class="btn-secondary">Fale conosco</button>
+            </div>
+        </section>
+
+        <section class="unidades-container">
+            <h3>ENCONTRE UMA UNIDADE PERTO DE VOCÊ</h3>
+            
+            <div class="card-unidade">
+                <h4>Unidade Digital | Medprev Alta Floresta - MT</h4>
+                <p>ℹ️ Exclusiva para agendamento de consultas online (teleconsulta)</p>
+                <p>🕒 Agende sozinho 24h por dia</p>
+                <p>❗ indisponível no momento</p>
+                <button class="btn-agendar">Agendar Consulta Online</button>
+        </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
+</html>
